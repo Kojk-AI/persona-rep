@@ -87,17 +87,33 @@ def primary_emotions_function_dataset(data_dir, user_tag='', assistant_tag='', s
 def primary_persona_concept_dataset_test(data_dir, user_tag='', assistant_tag='', seed=0):
     random.seed(0)
 
-    template_str = '{user_tag} Consider the {personality}/{personality_anti} of the author for following text:\nText: {scenario}\nAnswer: {assistant_tag} '
+#     template_str = '{user_tag} What is the personality of the author for following text:\nText: {scenario} \
+# {assistant_tag} The personality of the author is'
+#     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
+# Answer {personality} or {personality_anti} with the tag <answer>.{assistant_tag} The personality of the author is'
+    template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
+{assistant_tag} The personality of the author is'
+#     template_str = '{user_tag} The Myers-Briggs Type Indicator (MBTI) is a popular personality assessment tool that \
+# categorizes individuals into 16 different personality types based on four key dichotomies. One of these dichotomies is Extraversion (E) vs. Introversion (I), which describes where people \
+# primarily focus their attention and get their energy from.\n\nExtraversion (E):\nEnergy Source: Extraverts gain energy from external stimuli, such as social interactions and \
+# engaging with the outside world.\n\nFocus: Their focus is outward, toward people, activities, and things. They often feel energized and motivated by being around others.\nCommunication: \
+# They tend to be more talkative, expressive, and assertive. Extraverts often think out loud and enjoy engaging in conversations and activities with others.\nSocial Preference: Extraverts \
+# typically enjoy being in groups, meeting new people, and participating in social activities. They might seek out social interactions to recharge.\n\nIntroversion (I):\nEnergy Source: \
+# Introverts gain energy from internal stimuli, such as thoughts, reflections, and solitary activities.\nFocus: Their focus is inward, toward their inner thoughts and feelings. \
+# They often feel energized and refreshed by spending time alone or with a small, close group of people.\nCommunication: Introverts tend to be more reserved, reflective, and deliberate \
+# in their communication. They may prefer to think things through before speaking and often express themselves better in writing than in conversation.\nSocial Preference: Introverts \
+# generally prefer more intimate settings and one-on-one interactions. Large groups or prolonged social activities may feel draining to them.\n\nConsider the MBTI personality trait:{personality}/{personality_anti}, \
+# given by the description above, what is the personality of the author for following text:\nText: {scenario} {assistant_tag} The personality of the author is'
     personalities = ["introversion"]
     personalities_anti = ["extraversion"]
     raw_data = {}
     for personality, personality_anti in zip(personalities, personalities_anti):
         with open(os.path.join(data_dir, f'{personality}.json')) as file:
             # raw_data[emotion] = json.load(file)
-            raw_data[personality] = list(set(json.load(file)))[:200]
+            raw_data[personality] = list(set(json.load(file)))[:500]
         with open(os.path.join(data_dir, f'{personality_anti}.json')) as file:
             # raw_data[emotion] = json.load(file)
-            raw_data[personality_anti] = list(set(json.load(file)))[:200]
+            raw_data[personality_anti] = list(set(json.load(file)))[:500]
 
     formatted_data = {}
     for personality, personality_anti in zip(personalities, personalities_anti):
