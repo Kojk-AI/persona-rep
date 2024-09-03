@@ -90,9 +90,9 @@ def primary_persona_concept_dataset_test(data_dir, user_tag='', assistant_tag=''
 #     template_str = '{user_tag} What is the personality of the author for following text:\nText: {scenario} \
 # {assistant_tag} The personality of the author is'
 #     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
-# Answer {personality} or {personality_anti} with the tag <answer>.{assistant_tag} The personality of the author is'
+# Answer {personality} or {personality_anti} with the tag <answer>.{assistant_tag} The personality of the author is <answer>'
     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
-{assistant_tag} The personality of the author is'
+{assistant_tag} The personality of the author is '
 #     template_str = '{user_tag} The Myers-Briggs Type Indicator (MBTI) is a popular personality assessment tool that \
 # categorizes individuals into 16 different personality types based on four key dichotomies. One of these dichotomies is Extraversion (E) vs. Introversion (I), which describes where people \
 # primarily focus their attention and get their energy from.\n\nExtraversion (E):\nEnergy Source: Extraverts gain energy from external stimuli, such as social interactions and \
@@ -119,6 +119,66 @@ def primary_persona_concept_dataset_test(data_dir, user_tag='', assistant_tag=''
     for personality, personality_anti in zip(personalities, personalities_anti):
         c_e, o_e = raw_data[personality], raw_data[personality_anti]
         random.shuffle(o_e)
+
+        data = [[c,o] for c,o in zip(c_e, o_e)]
+        train_labels = []
+        for d in data:
+            true_s = d[0]
+            random.shuffle(d)
+            train_labels.append([s == true_s for s in d])
+        
+        data = np.concatenate(data).tolist()
+        data_ = np.concatenate([[c,o] for c,o in zip(c_e, o_e)]).tolist()
+        
+        emotion_test_data = [template_str.format(personality=personality, personality_anti=personality_anti, scenario=d, user_tag=user_tag, assistant_tag=assistant_tag) for d in data_]
+        emotion_train_data = [template_str.format(personality=personality, personality_anti=personality_anti, scenario=d, user_tag=user_tag, assistant_tag=assistant_tag) for d in data]
+
+        formatted_data[personality] = {
+            'train': {'data': emotion_train_data, 'labels': train_labels},
+            'test': {'data': emotion_test_data, 'labels': [[1,0]* len(emotion_test_data)]}
+        }
+    return formatted_data
+
+def primary_persona_concept_dataset_test2(data_dir, user_tag='', assistant_tag='', seed=0):
+    random.seed(0)
+
+    template_str = '{user_tag} What is the personality of the author for following text:\nText: {scenario}.\n\
+{assistant_tag} The personality of the author is '
+#     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
+# Answer {personality} or {personality_anti} with the tag <answer>.{assistant_tag} The personality of the author is ' 
+#     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
+# {assistant_tag} The personality of the author is '
+#     template_str = '{user_tag} The Myers-Briggs Type Indicator (MBTI) is a popular personality assessment tool that \
+# categorizes individuals into 16 different personality types based on four key dichotomies. One of these dichotomies is Extraversion (E) vs. Introversion (I), which describes where people \
+# primarily focus their attention and get their energy from.\n\nExtraversion (E):\nEnergy Source: Extraverts gain energy from external stimuli, such as social interactions and \
+# engaging with the outside world.\n\nFocus: Their focus is outward, toward people, activities, and things. They often feel energized and motivated by being around others.\nCommunication: \
+# They tend to be more talkative, expressive, and assertive. Extraverts often think out loud and enjoy engaging in conversations and activities with others.\nSocial Preference: Extraverts \
+# typically enjoy being in groups, meeting new people, and participating in social activities. They might seek out social interactions to recharge.\n\nIntroversion (I):\nEnergy Source: \
+# Introverts gain energy from internal stimuli, such as thoughts, reflections, and solitary activities.\nFocus: Their focus is inward, toward their inner thoughts and feelings. \
+# They often feel energized and refreshed by spending time alone or with a small, close group of people.\nCommunication: Introverts tend to be more reserved, reflective, and deliberate \
+# in their communication. They may prefer to think things through before speaking and often express themselves better in writing than in conversation.\nSocial Preference: Introverts \
+# generally prefer more intimate settings and one-on-one interactions. Large groups or prolonged social activities may feel draining to them.\n\nConsider the MBTI personality trait:{personality}/{personality_anti}, \
+# given by the description above, what is the personality of the author for following text:\nText: {scenario} {assistant_tag} The personality of the author is '
+    personalities = ["introversion"]
+    personalities_anti = ["extraversion"]
+    p_fine = ["INFJ","INFP","INTJ","INTP","ISFJ","ISFP","ISTJ","ISTP"]
+    p_fine_anti = ["ENFJ","ENFP","ENTJ","ENTP","ESFJ","ESFP","ESTJ","ESTP"]
+    raw_data = {}
+    for personality, personality_anti in zip(personalities, personalities_anti):
+        raw_data[personality] = []
+        raw_data[personality_anti] = []
+        for p, p_anti in zip(p_fine,p_fine_anti):
+            with open(os.path.join(data_dir, f'{p}.json')) as file:
+                # raw_data[emotion] = json.load(file)
+                raw_data[personality].extend(list(set(json.load(file)))[:50])
+            with open(os.path.join(data_dir, f'{p_anti}.json')) as file:
+                # raw_data[emotion] = json.load(file)
+                raw_data[personality_anti].extend(list(set(json.load(file)))[:50])
+
+    formatted_data = {}
+    for personality, personality_anti in zip(personalities, personalities_anti):
+        c_e, o_e = raw_data[personality], raw_data[personality_anti]
+        # random.shuffle(o_e)
 
         data = [[c,o] for c,o in zip(c_e, o_e)]
         train_labels = []
