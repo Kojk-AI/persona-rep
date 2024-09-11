@@ -89,8 +89,11 @@ def primary_persona_concept_dataset_test(data_dir, user_tag='', assistant_tag=''
 
 #     template_str = '{user_tag} What is the personality of the author for following text:\nText: {scenario} \
 # {assistant_tag} The personality of the author is'
+#     template_str = '{user_tag} Consider 2 personality traits: A and B. A and B are codenames for 2 opposing personality traits. The authors will either be A or B. \
+# Based on this, what is the personality of the author for following text: {scenario}.\n\
+# After answer A or B with the tag <answer>.{assistant_tag} The personality of the author is <answer>'
 #     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
-# Answer {personality} or {personality_anti} with the tag <answer>.{assistant_tag} The personality of the author is <answer>'
+# Answer {personality} or {personality_anti}.{assistant_tag} The personality of the author is <answer>'
     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
 {assistant_tag} The personality of the author is '
 #     template_str = '{user_tag} The Myers-Briggs Type Indicator (MBTI) is a popular personality assessment tool that \
@@ -142,12 +145,12 @@ def primary_persona_concept_dataset_test(data_dir, user_tag='', assistant_tag=''
 def primary_persona_concept_dataset_test2(data_dir, user_tag='', assistant_tag='', seed=0):
     random.seed(0)
 
-    template_str = '{user_tag} What is the personality of the author for following text:\nText: {scenario}.\n\
+    template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
 {assistant_tag} The personality of the author is '
+#     template_str = '{user_tag} What is the personality of the author for following text:\nText: {scenario}.\n\
+# {assistant_tag} The personality of the author is '
 #     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
 # Answer {personality} or {personality_anti} with the tag <answer>.{assistant_tag} The personality of the author is ' 
-#     template_str = '{user_tag} Consider the personality trait:{personality}/{personality_anti}. What is the personality of the author for following text:\nText: {scenario}.\n\
-# {assistant_tag} The personality of the author is '
 #     template_str = '{user_tag} The Myers-Briggs Type Indicator (MBTI) is a popular personality assessment tool that \
 # categorizes individuals into 16 different personality types based on four key dichotomies. One of these dichotomies is Extraversion (E) vs. Introversion (I), which describes where people \
 # primarily focus their attention and get their energy from.\n\nExtraversion (E):\nEnergy Source: Extraverts gain energy from external stimuli, such as social interactions and \
@@ -159,22 +162,36 @@ def primary_persona_concept_dataset_test2(data_dir, user_tag='', assistant_tag='
 # in their communication. They may prefer to think things through before speaking and often express themselves better in writing than in conversation.\nSocial Preference: Introverts \
 # generally prefer more intimate settings and one-on-one interactions. Large groups or prolonged social activities may feel draining to them.\n\nConsider the MBTI personality trait:{personality}/{personality_anti}, \
 # given by the description above, what is the personality of the author for following text:\nText: {scenario} {assistant_tag} The personality of the author is '
-    personalities = ["introversion"]
-    personalities_anti = ["extraversion"]
-    p_fine = ["INFJ","INFP","INTJ","INTP","ISFJ","ISFP","ISTJ","ISTP"]
-    p_fine_anti = ["ENFJ","ENFP","ENTJ","ENTP","ESFJ","ESFP","ESTJ","ESTP"]
+    # personalities = ["introversion"]
+    # personalities_anti = ["extraversion"]
+    # p_fine = ["INFJ","INFP","INTJ","INTP","ISFJ","ISFP","ISTJ","ISTP"]
+    # p_fine_anti = ["ENFJ","ENFP","ENTJ","ENTP","ESFJ","ESFP","ESTJ","ESTP"]
+    personalities = ["judgement"]
+    personalities_anti = ["perception"]
+    p_fine = ["INTJ","INFJ","ENTJ","ENFJ","ISTJ","ISFJ","ESTJ","ESFJ"]
+    p_fine_anti = ["INTP","INFP","ENTP","ENFP","ISTP","ISFP","ESTP","ESFP"]
     raw_data = {}
     for personality, personality_anti in zip(personalities, personalities_anti):
         raw_data[personality] = []
         raw_data[personality_anti] = []
         for p, p_anti in zip(p_fine,p_fine_anti):
-            with open(os.path.join(data_dir, f'{p}.json')) as file:
+            with open(os.path.join(data_dir, f'{p}.json')) as file1:
                 # raw_data[emotion] = json.load(file)
-                raw_data[personality].extend(list(set(json.load(file)))[:50])
-            with open(os.path.join(data_dir, f'{p_anti}.json')) as file:
+                d1 =  list(set(json.load(file1)))
+                raw_data[personality].extend(d1[:500])
+            with open(os.path.join(data_dir, f'{p_anti}.json')) as file2:
                 # raw_data[emotion] = json.load(file)
-                raw_data[personality_anti].extend(list(set(json.load(file)))[:50])
-
+                d2 =  list(set(json.load(file2)))
+                raw_data[personality_anti].extend(d2[:500])
+            if len(d1) <500 or len(d2) <500:
+                print("Error")
+            # max=200
+            # if len(d1) >= len(d2):
+            #     raw_data[personality_anti].extend(d1[:len(d2)])
+            #     raw_data[personality].extend(d2)
+            # else:
+            #     raw_data[personality_anti].extend(d1)
+            #     raw_data[personality].extend(d2[:len(d1)])
     formatted_data = {}
     for personality, personality_anti in zip(personalities, personalities_anti):
         c_e, o_e = raw_data[personality], raw_data[personality_anti]
