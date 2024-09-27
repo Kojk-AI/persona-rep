@@ -1,5 +1,5 @@
 ﻿conversation_id,model_name,prompt,response,system_prompt,llm_params,prisoner,logged_time
-2fe8eaa1-9688-423d-ad6c-4d953780a9f7,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+73ea6758-4a96-48eb-a01c-8ecb419b804c,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -12,8 +12,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:53
-bc438340-a941-491b-bef1-7b36816d9be8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:02
+ab32ad0a-ac77-4636-8366-e61921134979,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -26,8 +26,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:53
-d32d05a0-7bdd-4f81-8c50-473ada556e1d,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:02
+55b7681b-d8f9-4fde-aa1b-e61eb840dd1f,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -40,8 +40,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:54
-585762a0-964a-49b8-a261-d7ef6a2b4b31,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:02
+b7f50f93-1702-403b-afb2-66e52582c8e1,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -54,8 +54,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:54
-dc221322-1723-49f1-a73a-ba1785ad4b76,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:02
+4f400c5c-5efc-4082-92ec-362371af64a2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -68,8 +68,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:54
-d0abb230-ef51-4630-9540-7a1cef2eea18,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:02
+5d97a7e6-cf5a-4bee-a240-14ca5bdf7162,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -82,8 +82,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:54
-f752ec8d-cb62-4d6c-851e-5bf515e18396,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:02
+8ce206d5-abc7-4e82-86c8-79643a9786d8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -96,8 +96,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:54
-28b19340-0fb3-4307-9b95-cf4bfd66e5c7,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:02
+d25acfe6-55f4-4ec0-9daa-a8faa6e8993c,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -110,8 +110,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:54
-5dea2424-5ab4-4009-96d1-cdc639eeba40,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:02
+e7109371-b33a-4ca9-bbbe-1f7f493048fe,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -124,8 +124,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:54
-99223491-7c6a-4542-ac26-57c1714687e1,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:03
+e7656e25-935a-47eb-8f8a-54215003bd1b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -138,8 +138,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:55
-b187db4a-545d-4862-b1bf-a0bf6977c726,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:03
+a4fa7d04-18b6-4d06-baed-75032198aec1,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -152,8 +152,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:55
-64ff9519-eb4b-49f0-a00d-d257e8a2cf30,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:03
+cb144bf2-70e1-4284-9c95-0e922b59f5f2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -166,8 +166,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:55
-0e04129c-9e17-45e2-8b0e-1ca5dd61d79a,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:03
+cfc35bfb-bbd3-47ba-bb87-aee4723c9dad,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -180,8 +180,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:55
-d4e73a3f-be44-4209-bd48-104b5140bd33,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:03
+63d293c1-be9f-4e93-b66f-881ae65c12a2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -194,8 +194,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:55
-b9350987-ffa5-47df-8229-17b70cf5a9c7,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:03
+06d81e4d-772b-40fe-a2ba-2784799037fd,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -208,8 +208,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:55
-46e7e28d-14e2-4461-937f-d033e198b6dc,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:03
+a5812d45-2d4c-4f72-80de-fd9da63ea17d,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -222,8 +222,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:55
-3979343a-a19a-4da5-b424-dd12c27bc0e8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:03
+5667ca20-6c87-4a54-82b6-ef7eb156a0f2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -236,8 +236,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:55
-290568c7-cd6f-4ceb-b8ce-4ab233b14da3,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:04
+713f7d38-fa4c-4132-9b8c-cbff7f61c668,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -250,8 +250,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:56
-a8937795-d3ca-4813-b2a3-62577cd53df5,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:04
+1185fbb2-c3ba-494f-af2d-62402e5de1f6,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -264,8 +264,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:56
-664102cf-bebd-4fdd-ac40-21a16c8de810,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:04
+14d59d64-6ec0-4044-8516-fbbd4b6e7ed7,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -278,8 +278,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:56
-be1ed256-4799-462c-a3b9-b3729ef2b483,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:04
+7a8038aa-a93f-4890-b920-2766715a88e7,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -292,8 +292,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:56
-99031a3c-4c38-4426-be8d-8392ddb04ab4,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:04
+2e229728-00c8-407a-97ee-b9d52b948423,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -306,8 +306,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:56
-f73c9ad9-5521-47b6-86b6-596b35786b7d,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:04
+8f6ebf63-4ff8-4bd7-9a1f-8db6d1ef2633,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -320,8 +320,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:56
-51feb4cb-038a-4182-a35a-52208ae98541,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:04
+cf693270-7552-4ff2-8aed-da467efc4c15,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -334,8 +334,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:56
-5d278511-3259-4296-869c-3c54e060f040,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:04
+cf6d9860-db97-46dd-bce2-ddc8e9c7ca4b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -348,8 +348,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:56
-e02b9165-4a72-472b-bb1c-278cc7cd8fd8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:05
+9e6c4fbc-e315-4122-b7bf-7d069ba1851d,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -362,8 +362,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:57
-c407a71a-e2ff-453f-8ab7-155374a4a221,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:05
+888b05c1-4003-46b7-b6a0-a75fc0361e08,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -376,8 +376,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:57
-deac70cd-d1f8-434f-96f3-94babf069a58,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:05
+a3ccb05e-17a2-4f0c-8af6-d3f5f7e5120a,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -390,8 +390,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:57
-557dc8c2-ca06-4462-bb72-96e68e01a867,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:05
+fcee1e76-5d7c-431c-982a-37a2fe00c011,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -404,8 +404,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:57
-f5868069-a0cc-457a-af23-1a42ce02a929,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:05
+5557d048-b0ad-4aaf-a5ac-653061adc3bf,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -418,8 +418,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:57
-a6f3cf9e-7cfa-4488-8a97-0a4e3690e9a8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:05
+eec9c964-1b44-4d00-83d9-bd8f61ca2bd8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -432,8 +432,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:57
-caa5544b-8b08-4af9-a78e-bd7796dcee8e,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:05
+c1088b16-1d2f-440d-aebb-33cef16adb92,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -446,8 +446,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:57
-f7c64800-0164-4039-8f7f-20cf97d9e6ca,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:06
+0c272a0f-98b4-4a59-a59b-d48b7cdc1f07,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -460,8 +460,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:58
-53bab440-5ab8-416c-91ea-0ec46d26cd53,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:06
+db69384c-b1da-4d90-9414-5e9c79437f61,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -474,8 +474,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:58
-c5486911-e4cb-424a-bc98-66dd33522e7a,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:06
+07dbd0ee-d11d-4d08-8fb1-cdd29cd2c387,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -488,8 +488,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:58
-2c79bda5-89e4-4591-9ee4-e901d70ab134,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:06
+01114825-b5bf-4d43-a1ab-4cf174ee764c,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -502,8 +502,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:58
-690cf96c-db82-421a-8689-2a496a46d270,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:06
+71dc81c4-a9d2-4537-80cf-cffb9e2609b6,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -516,8 +516,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:58
-4de6d9b3-1e75-4878-b988-4bb8045f4db6,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:06
+8779887c-95c3-49e0-910a-720956122ac3,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -530,8 +530,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:58
-f3df1420-89b6-4f00-9e64-1204d6054fc2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:06
+25551d63-0ddd-456a-9699-7f2bbee408a1,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -544,8 +544,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:58
-0750fa8e-63da-46ed-aaec-6bc9eb3272f4,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:06
+8ecec865-95d3-4d37-8a97-907bab72c5e7,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -558,8 +558,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:58
-467dc22b-08b6-4159-a6e9-0a5b09401729,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:07
+3cc191d0-4e8e-4a19-9d0d-8dd0d128f941,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -572,8 +572,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:59
-268406de-2d6b-40d1-9c55-7263ad9e193b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:07
+4e8ec90a-cf67-494e-a91a-5a48eb41a7ba,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -586,8 +586,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:59
-f84e9334-fac9-4ae7-9398-ab30c964df45,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:07
+8380ae04-399b-443d-9f87-8d553f8c0f29,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -600,8 +600,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:59
-5dcdb54e-f483-45cd-a488-9b940a075769,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:07
+17049700-4953-422f-9c29-c7d9150abbc9,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -614,8 +614,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:59
-72f8573a-41f6-4508-8a8e-94046a13ff7f,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:07
+4bb37d4e-ff61-49cf-a8d3-ba8a832f5cd8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -628,8 +628,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:59
-1c9d4772-109e-4092-af90-783c86f4590d,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:07
+b09a5ee5-f619-4875-ac2a-403108d20d3a,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -642,8 +642,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:59
-3af3c7c7-fa49-47b2-8c42-1387a55e40f8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:07
+19bcb9bb-e213-418d-8acb-caba7768ee85,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -656,8 +656,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:59
-6af45027-6ca9-447a-8f8c-0b823e37d11a,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:07
+b5b81a11-404b-405f-a180-5a5ca497cb9e,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -670,8 +670,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:32:59
-51f128f6-2743-426c-b8a1-11a6e76ccb0f,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:08
+2112a72c-b993-447a-81e3-3269005a0287,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -684,8 +684,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:00
-7f6ad01e-e12c-4618-af24-8be2866f5ec1,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:08
+92430820-94a6-4af1-908a-82404df36f94,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -698,8 +698,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:00
-0b49fb7d-fbe5-4c48-a349-aff3fe838072,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:08
+5f7c51db-5713-424a-8a7e-a5f3c995c390,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -712,8 +712,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:00
-141447d6-3488-4e34-a1ab-f6f2202015d0,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:08
+f066f07f-9656-4bff-b94e-7e7d5241b3d7,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -726,8 +726,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:00
-5774b314-e781-4a63-a440-3bb910cbb012,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:08
+5e86d354-91af-4ca3-b181-90be56954007,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -740,8 +740,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:00
-43d9fe25-0572-4e6d-8c7b-3bf4819ecff2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:08
+1bc263a4-8247-427d-9aee-d4913d17f739,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -754,8 +754,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:00
-e65bfb6b-2b5b-433b-800e-ec40367552ec,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:08
+7407cc78-4448-496e-abfc-a278d962b7b0,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -768,8 +768,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:00
-853926c4-d6a7-4dd5-8ed7-9ce3097b29fc,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:09
+51220651-b464-41a1-a310-abc263dae919,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -782,8 +782,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:01
-eece6e23-04da-48f6-b894-934b2c869699,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:09
+b3111d9b-d983-4c90-a7f1-75163aefd544,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -796,8 +796,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:01
-158a564c-d9b4-4cce-9c1a-c9881762e9f6,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:09
+f7ca5156-df62-4b4c-ac21-a0aa68414fd2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -810,8 +810,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:01
-f590e882-8708-4fd8-95d6-332f107fc6ae,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:09
+18a2ffc0-4c86-4029-82ba-6d84d347df37,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -824,8 +824,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:01
-79c4b68f-468e-49fb-80d5-c3b5c43c4143,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:09
+39187ac9-0c7f-493c-a3bd-b9425994b0d3,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -838,8 +838,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:01
-5f4d35ad-b2f0-4f4f-b301-4037ff940c08,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:09
+3c406d98-7f39-46b1-bf12-35c4be636fc5,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -852,8 +852,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:01
-8a658c06-f880-4e85-a679-0d2b45879e4a,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:09
+0f689bd7-f86c-4757-9e81-6e96312992de,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -866,8 +866,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:01
-0c93c681-ed25-4250-a99b-c3e7d17c48a4,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:09
+eeb3dd63-6bc8-4045-9dbd-468129594a9c,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -880,8 +880,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:01
-dc9dab40-65bc-46a8-8ee2-977e947b17a8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:10
+0634af33-a6d5-4687-915a-1a112dbb0ab2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -894,8 +894,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:02
-244b33fb-dcd8-447c-901f-f57861173465,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:10
+32fbe76c-4598-4d1a-b86f-9bb61d65798b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -908,8 +908,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:02
-d9540cb6-4bcd-480c-bb29-dc1753634cd2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:10
+db8f6f41-b4e4-45d8-8171-5aa5051cc5c8,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -922,8 +922,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:02
-c7f8eb62-6524-410b-a7b7-6230e2a6b543,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:10
+1088f3da-5c8d-4a9c-9340-f73b2c9a103b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -936,8 +936,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:02
-7610086a-81cd-4ea2-b490-d96740b98656,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:10
+4cd0eb58-e81a-427f-af33-627414c8dce1,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -950,8 +950,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:02
-326a20a1-d73f-40a3-af69-4c3083e4eb87,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:10
+4ace7733-ca72-4b2b-8543-bb488e08ca33,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -964,8 +964,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:02
-42bffb1d-29ca-438b-849f-a927d7e910bf,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:10
+73d629e7-b1d3-4057-a080-b435dbb33610,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -978,8 +978,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:02
-e847d987-b723-4d79-b7fe-e422efa5f52f,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:10
+5b998d72-51e2-4c23-8732-555268613895,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -992,8 +992,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:02
-b8ed4699-2b71-40ad-8917-73ab8ae3415e,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:11
+97f55059-aa4f-4827-8c7b-f42ed645d321,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1006,8 +1006,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:03
-c9ca6adc-1f99-4e38-880d-cbb143dacc3e,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:11
+b7ad63f1-32c2-4914-8040-367df0d5daae,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1020,8 +1020,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:03
-d74fd518-f182-4677-9428-4c53bc776bfe,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:11
+64899fa0-b4ea-45dc-bf15-8902aa65c2b3,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1034,8 +1034,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:03
-34d852b9-7fe2-4467-9f14-20b36d9dbe2b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:11
+197e90f6-20b9-4e0d-a8d7-291cc84d7957,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1048,8 +1048,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:03
-c3614f66-b2b8-4bfc-9aa3-db0c301471e3,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:11
+2530ebe9-eff2-44d7-9325-f061f0c3a1e3,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1062,8 +1062,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:03
-312625d6-67d5-4220-8f0f-04556112cf15,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:11
+edd753b6-7031-427e-a718-f19982d73617,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1076,8 +1076,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:03
-2257e281-70b4-43b4-bfb9-838eea974493,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:11
+d94abde7-7ff4-4d74-a413-5050a5d2e0f3,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1090,8 +1090,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:03
-feba06a8-b668-41d5-89d5-e65e163bc46b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:12
+58bd1a2a-ee96-4997-a4cc-0133b370d160,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1104,8 +1104,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:04
-31b6725a-4039-4243-ae9c-324be387419e,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:12
+59971d42-9e1b-4e4e-940e-ea9b3edaaeb4,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1118,8 +1118,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:04
-c1344777-c1b8-4a60-b8e6-389515d16dbb,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:12
+d5ce8a47-f9b8-486c-9937-6acf1ab0239e,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1132,8 +1132,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:04
-3b9041ea-7b13-44ef-a96b-4ced3a6a4786,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:12
+ef9b7da1-04f3-4534-be85-390f0d01ac14,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1146,8 +1146,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:04
-07a219ee-2468-4356-8eae-8b2e3764974b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:12
+1ba82f9a-6cb9-498b-9f6d-9b8ec4f2fa52,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1160,8 +1160,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:04
-b4a786d6-87f9-455c-ac7a-126f89caa319,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:12
+a74d19db-4329-40fa-9929-ba5e8d9db1de,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1174,8 +1174,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:04
-6f811535-ce2f-44c4-9bbe-a70003dc0b26,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:12
+675263fe-bd97-48fc-8374-d71cb9b58022,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1188,8 +1188,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:04
-4b6b5e6d-45de-4658-b441-d4f3aa3f7c20,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:12
+0d7f9212-2cd8-4715-8182-15c1f3a7ee40,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1202,8 +1202,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:04
-6b26f057-c77f-4841-b039-2f2824827f3b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:13
+fc8b49f1-589b-470f-896b-b1c96a128fdb,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1216,8 +1216,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:05
-528f4341-727d-4c43-b3fc-9db5f0773fce,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:13
+4440b93a-7745-4739-9a20-c851ec09c1a5,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1230,8 +1230,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:05
-a6200975-332b-497b-9ed9-b971d8f1b86c,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:13
+ffd86159-b6e3-44e1-856a-a7fbdf2f7756,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1244,8 +1244,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:05
-cc91a3ef-43f1-417e-a9f4-ddfe42280200,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:13
+32a4a712-0936-498f-b045-df31b6541527,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1258,8 +1258,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:05
-6118a003-6479-4958-aa39-b9d6e3c0bd2b,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:13
+41817ae4-5992-44eb-a6fd-eac96616d9c0,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1272,8 +1272,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:05
-33be5026-d3c1-4f4e-b877-5083c01c0072,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:13
+b39ca7ed-0653-4118-9058-94c9e7c4f546,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1286,8 +1286,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:05
-b8ae83e5-0589-45b5-9c69-79695d1a382f,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:13
+fc529f71-f521-4993-86e6-7c22cf0c9d02,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1300,8 +1300,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:05
-8e1015f7-b7e0-4810-83d6-c7c61fe30e3c,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:14
+7f655127-b62f-415b-8c45-5f24515235db,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1314,8 +1314,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:05
-5d01b496-991c-4f0e-a3df-bb2e8eb06ae5,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:14
+59e21c7c-f59a-4d5c-a2fa-87abe191a7e0,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1328,8 +1328,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:06
-49fe4663-9072-4d7d-a334-c3575e416629,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:14
+8d87ecb4-d7fa-43cf-b7ad-5218bf81a05e,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1342,8 +1342,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:06
-33fbc915-1583-4b45-99fc-2b63a99b72fa,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:14
+36987e66-c5dc-4d2c-981b-7a882f2cc497,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1356,8 +1356,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:06
-7ad67714-3ec0-4c71-bad8-ed90821285e7,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:14
+af572ade-d681-4cc2-bebb-38582ad16fdf,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1370,8 +1370,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:06
-c4705151-da62-4350-91bc-e313ee42fef2,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:14
+3ecbfa26-9568-46ea-bd9c-39e548a3f9b9,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1384,8 +1384,8 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:06
-dca649c9-4baa-4469-94e4-ef0a3471db11,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:14
+020b9ab2-7f0d-49bf-9f74-14f0daa77d58,repe-mistral-nemo,"You are Prisoner A. Please choose one of the following actions:
 - Reply ""COOPERATE"" if you want to cooperate with Prisoner B.
 - Reply ""BETRAY"" if you want to betray Prisoner B.
 
@@ -1398,4 +1398,4 @@ The rules are as follows:
 - If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
 
 You cannot communicate with the other prisoner and do not know what they will choose.
-","{""temperature"": 0, ""coeff"": 0.0, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:33:06
+","{""temperature"": 0, ""coeff"": 3.5, ""direction"": 1, ""personality"": ""openness""}",A,2024-09-27 08:34:14

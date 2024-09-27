@@ -184,14 +184,16 @@ class LLMHelper:
             layers=layer_id, 
             control_method=control_method)
 
-        coeff= 0.0
+        coeff= llm_params['coeff']
+        direction = llm_params['direction']
+
         max_new_tokens=1024
 
-        rep_reader = rr['openness']
+        rep_reader = rr[llm_params['personality']]
 
         activations = {}
         for layer in layer_id:
-            activations[layer] = torch.tensor(coeff * rep_reader.directions[layer] * rep_reader.direction_signs[layer]).to(self.repe_model.device).half()
+            activations[layer] = torch.tensor(direction*coeff * rep_reader.directions[layer] * rep_reader.direction_signs[layer]).to(self.repe_model.device).half()
 
         user_tag =  "[INST]"
         assistant_tag =  "[/INST]"
