@@ -195,13 +195,26 @@ class LLMHelper:
         for layer in layer_id:
             activations[layer] = torch.tensor(direction*coeff * rep_reader.directions[layer] * rep_reader.direction_signs[layer]).to(self.repe_model.device).half()
 
-        user_tag =  "[INST]"
-        assistant_tag =  "[/INST]"
-        inputs = [
-            f"{user_tag} {prompt} {assistant_tag}",
-        ]
+        if len(conversation_history) > 1:
+            user_tag =  "[INST]"
+            assistant_tag =  "[/INST]"
+            inputs = [
+                f"{user_tag}{data['system']}\n\n{prompt}{assistant_tag}",
+            ]
+        else:
+            user_tag =  "[INST]"
+            assistant_tag =  "[/INST]"
+            inputs = [
+                f"{user_tag}{prompt}{assistant_tag}",
+            ]
 
-        response = rep_control_pipeline(inputs, activations=activations, max_new_tokens=max_new_tokens, temperature=llm_params['temperature'])
+        print(f"Prompt: {inputs}")
+        print(f"Temperature: {llm_params['temperature']}")
+        if llm_params['temperature'] == 0.0:
+            do_sample=False
+        else:
+            do_sample=True
+        response = rep_control_pipeline(inputs, activations=activations, max_new_tokens=max_new_tokens, do_sample=do_sample, temperature=llm_params['temperature'])
         response = response[0][0]['generated_text'].replace(inputs[0], "")
 
         return response

@@ -1,0 +1,141 @@
+,conversation_id,model_name,prompt,response,system_prompt,llm_params,prisoner,logged_time
+10,43cabebf-8192-46a7-8b3d-60e840b2c6f6,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:35
+11,d98f4f49-7733-4a31-94f6-b646c2ccb500,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:35
+12,968f0c01-76e7-4033-ba92-952faaed66f5,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:36
+13,f2a54f79-3207-4f0e-9e5c-74ec1c10e204,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:36
+14,3b089e7a-4472-4c4f-b959-6c39f0447379,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:36
+15,78294bcd-276e-48a7-b8c8-801083f5275c,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:36
+16,d043a459-f8e0-4e73-a2d2-1bc9e179d638,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:36
+17,15005956-19ff-4d1f-8228-fd7befc4091e,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:36
+18,5cd2033e-9023-416e-8c79-2153a944e9a0,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:36
+19,a47a7fb0-0554-4504-b360-781e6f1cf3be,repe-mistral-nemo,"Your personality is 0% neuroticism based on the big 5 personality traits. You are Prisoner B. Please choose one of the following actions:
+- Reply ""COOPERATE"" if you want to cooperate with Prisoner A.
+- Reply ""BETRAY"" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either ""COOPERATE"" or ""BETRAY"".",COOPERATE,"You are about to play a game called the ""Prisoner's Dilemma"" with another player. You are both prisoners involved in a crime. You can either choose to COOPERATE with the other prisoner or BETRAY them. Your goal is to minimize the number of years you spend in prison.
+
+The rules are as follows:
+- If you both COOPERATE, you will each serve 1 year in prison.
+- If you both BETRAY, you will each serve 3 years in prison.
+- If you COOPERATE and the other prisoner BETRAYS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+- If you BETRAY and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+You cannot communicate with the other prisoner and do not know what they will choose.
+","{""temperature"": 0.3, ""coeff"": 0.0, ""direction"": -1, ""personality"": ""neuroticism""}",B,2024-09-30 07:02:37

@@ -36,4 +36,32 @@ PD_PRISONER_B_USER_PROMPT = """You are Prisoner B. Please choose one of the foll
 
 What is your decision? Only reply with one word, either "COOPERATE" or "BETRAY"."""
 
+PD_PRISONER_A_USER_PROMPT_COT = """You are Prisoner A. Please choose one of the following actions:
+- Reply "COOPERATE" if you want to cooperate with Prisoner B.
+- Reply "BETRAY" if you want to betray Prisoner B.
+
+What is your decision? Think step by step and reply with either <ans>COOPERATE</ans> or <ans>BETRAY</ans>"."""
+
+PD_PRISONER_B_USER_PROMPT_COT = """You are Prisoner B. Please choose one of the following actions:
+- Reply "COOPERATE" if you want to cooperate with Prisoner A.
+- Reply "BETRAY" if you want to betray Prisoner A.
+
+What is your decision? Think step by step and reply with either <ans>COOPERATE</ans> or <ans>BETRAY</ans>"."""
+
+PD_PRISONER_A_USER_PROMPT_TEST_1 = """What is the lowest/highest payoff player A can get in a single round?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_2 = """Which actions is player A allowed to play?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_3 = """What is the lowest/highest payoff player B can get in a single round?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_4 = """Which actions is player B allowed to play?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_5 = """Which is player X’s payoff in a single round if X betrays and Y betrays?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_6 = """Which is player X’s payoff in a single round if X cooperates and Y cooperates?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_7 = """Which is player X’s payoff in a single round if X betrays and Y cooperates?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_8 = """Which is player X’s payoff in a single round if X cooperates and Y betrays?"""
+
 """Ultimatum Game"""
