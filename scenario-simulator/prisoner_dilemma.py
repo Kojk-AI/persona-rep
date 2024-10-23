@@ -28,6 +28,7 @@ class PrisonersDilemma:
     def __init__(
         self,
         model_name: str,
+        llm_parms: dict,
         player2_strategy: PlayerStrategy,
         n_rounds: int = 10,
         n_iterations: int = 1,
@@ -46,6 +47,7 @@ class PrisonersDilemma:
             prisoner_A_filename (str): Log file for Player 1 (LLM).
         """
         self.model_name = model_name
+        self.llm_params = llm_parms
         self.player2_strategy = player2_strategy
         self.n_rounds = n_rounds
         self.n_iterations = n_iterations
@@ -56,7 +58,7 @@ class PrisonersDilemma:
         # Instantiate the LLMHelper class for calling the LLM
         self.llm_helper = LLMHelper()
 
-    def simulate(self):
+    def simulate(self, cot: bool):
         """
         Simulate the game for the specified number of iterations and rounds.
         """
@@ -69,7 +71,7 @@ class PrisonersDilemma:
                 history_summary = self._create_summary_string(history, round_num)
 
                 # Call the LLM to get Player 1's action
-                player1_action = self._player1_fn_using_llm(history_summary, round_num)
+                player1_action = self._player1_fn_using_llm(cot, history_summary, round_num)
 
                 # Get Player 2's action based on its strategy
                 player2_action, defected = self._get_player2_action(
@@ -104,7 +106,7 @@ class PrisonersDilemma:
             ]
         )
 
-    def _player1_fn_using_llm(self, history_summary: str, round_num: int) -> str:
+    def _player1_fn_using_llm(self, cot: bool, history_summary: str, round_num: int) -> str:
         """
         Simulates Player 1's action by calling the LLM.
 
@@ -127,28 +129,40 @@ class PrisonersDilemma:
         You are playing as Player 1. After reviewing the history of previous rounds, respond with either 'Cooperate' or 'Defect' for the current round.
         """
 
-        PD_PRISONER_USER_PROMPT = f"""
-        The following is a summary of the previous rounds:
-        {history_summary}
-        What is your action for this round? Please respond with either 'Cooperate' or 'Defect'.
-        """
-
+        if cot:
+            PD_PRISONER_USER_PROMPT = f"""
+            The following is a summary of the previous rounds:
+            {history_summary}
+            What is your action for this round? First, think step by step and then reply with either <ans>COOPERATE</ans> or <ans>DEFECT</ans>.
+            """
+        else:
+            PD_PRISONER_USER_PROMPT = f"""
+            The following is a summary of the previous rounds:
+            {history_summary}
+            What is your action for this round? Please respond with either 'Cooperate' or 'Defect'.
+            """
         # Call the LLM using llm_helper
         response = self.llm_helper.call_llm(
             system_prompt=PD_PRISONER_SYSTEM_PROMPT,
             prompt=PD_PRISONER_USER_PROMPT,
             model_name=self.model_name,
-            llm_params={"temperature": 0},  # Deterministic behavior
+            llm_params=self.llm_params,  # Deterministic behavior
             prisoner="A",
             round=round_num,
             log_file=self.prisoner_A_filename,
         )
         # print(response)
         # Extract action from LLM response
-        if "cooperate" in response[self.model_name][0]["response"].lower():
-            return "Cooperate"
+        if cot:
+            if "<ans>COOPERATE</ans>" in response[self.model_name][0]['response']:
+                return "Cooperate"
+            elif "<ans>DEFECT</ans>" in response[self.model_name][0]['response']:
+                return "Defect"
         else:
-            return "Defect"
+            if "cooperate" in response[self.model_name][0]["response"].lower():
+                return "Cooperate"
+            else:
+                return "Defect"
 
     def _get_player2_action(
         self, defected: bool, opponent_action: str, round_num: int, history: list

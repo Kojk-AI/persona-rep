@@ -61,6 +61,12 @@ The following is a summary of the previous rounds:
 
 What is your action for this round? Please respond with either 'Cooperate' or 'Defect'.
 """
+PD_PRISONER_A_USER_PROMPT = """You are Prisoner A. Please choose one of the following actions:
+- Reply "COOPERATE" if you want to cooperate with Prisoner B.
+- Reply "BETRAY" if you want to betray Prisoner B.
+
+What is your decision? Only reply with one word, either "COOPERATE" or "BETRAY"."""
+
 PD_PRISONER_B_USER_PROMPT = """You are Prisoner B. Please choose one of the following actions:
 - Reply "COOPERATE" if you want to cooperate with Prisoner A.
 - Reply "BETRAY" if you want to betray Prisoner A.

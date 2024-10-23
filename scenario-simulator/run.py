@@ -5,6 +5,8 @@ llm_helper = LLMHelper()
 from scenario_prompts import *
 from tqdm.auto import tqdm
 
+from prisoner_dilemma import PrisonersDilemma, PlayerStrategy
+
 def run_single_round_experiment(model_name, prompt_a, prompt_b, prisoner_A_filename, prisoner_B_filename, llm_params={'temperature': 0}):
 	# Run 100 iteration for prisoner A
 	for _ in tqdm(range(100)):
