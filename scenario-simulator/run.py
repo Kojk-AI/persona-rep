@@ -7,7 +7,7 @@ from tqdm.auto import tqdm
 
 def run_single_round_experiment(model_name, prompt_a, prompt_b, prisoner_A_filename, prisoner_B_filename, llm_params={'temperature': 0}):
 	# Run 100 iteration for prisoner A
-	for _ in tqdm(range(10)):
+	for _ in tqdm(range(100)):
 		llm_helper.call_llm(
 			system_prompt=PD_PRISONER_SYSTEM_PROMPT,
 			prompt=prompt_a,
@@ -17,7 +17,7 @@ def run_single_round_experiment(model_name, prompt_a, prompt_b, prisoner_A_filen
 			log_file=prisoner_A_filename
 		)
 	# Run 100 iteration for prisoner B
-	for _ in tqdm(range(10)):
+	for _ in tqdm(range(100)):
 		llm_helper.call_llm(
 			system_prompt=PD_PRISONER_SYSTEM_PROMPT,
 			prompt=prompt_b,
@@ -39,7 +39,7 @@ def run_test(model_name, prompt, log_filename, llm_params={'temperature': 0}):
 			log_file=log_filename
 		)
 		
-def test_prompts(model_name, exp_name):
+def test_prompts(model_name, exp_name, cot):
     test = [PD_PRISONER_A_USER_PROMPT_TEST_1,
             PD_PRISONER_A_USER_PROMPT_TEST_2,
             PD_PRISONER_A_USER_PROMPT_TEST_3,
@@ -51,7 +51,10 @@ def test_prompts(model_name, exp_name):
             ]
 
     model_name = model_name
-    test_filename = f'{model_name}_{exp_name}_test_result.csv'
+    if cot:
+        test_filename = f'{model_name}-{exp_name}-cot_test_result.csv'
+    else:
+        test_filename = f'{model_name}-{exp_name}_test_result.csv'
 
     llm_params = {
         'temperature': 0.0,
@@ -91,7 +94,7 @@ def main(model_name):
             prompt_a = PD_PRISONER_A_USER_PROMPT
             prompt_b = PD_PRISONER_B_USER_PROMPT
 
-        test_prompts(model_name=model_name, exp_name=exp_name)
+        test_prompts(model_name=model_name, exp_name=exp_name, cot=cot)
 
         run_single_round_experiment(
             model_name=model_name,
@@ -120,9 +123,13 @@ def main(model_name):
                         'personality': personality,
                     }
                 exp_name = personality + "-" + direction
-                prisoner_A_filename = f'{model_name}-{exp_name}_prisoner_A_result.csv'
-                prisoner_B_filename = f'{model_name}-{exp_name}_prisoner_B_result.csv'
-
+                if cot:
+                    prisoner_A_filename = f'{model_name}-{exp_name}-cot_prisoner_A_result.csv'
+                    prisoner_B_filename = f'{model_name}-{exp_name}-cot_prisoner_B_result.csv'
+                else:
+                    prisoner_A_filename = f'{model_name}-{exp_name}_prisoner_A_result.csv'
+                    prisoner_B_filename = f'{model_name}-{exp_name}_prisoner_B_result.csv'
+                
                 run_single_round_experiment(
                     model_name=model_name,
                     prompt_a=prompt_a,
@@ -132,7 +139,7 @@ def main(model_name):
                     llm_params=llm_params,
                 )
 
-                test_prompts(model_name=model_name, exp_name=exp_name)
+                test_prompts(model_name=model_name, exp_name=exp_name, cot=cot)
 
                 #prompting
                 if direction == "plus":
@@ -155,8 +162,12 @@ def main(model_name):
                     prompt_b_prompt = f"Your personality is 0% {personality} based on the big 5 personality traits. " + prompt_b
 
                 exp_name = personality + "-" + direction + "-prompting"
-                prisoner_A_filename = f'{model_name}-{exp_name}_prisoner_A_result.csv'
-                prisoner_B_filename = f'{model_name}-{exp_name}_prisoner_B_result.csv'
+                if cot:
+                    prisoner_A_filename = f'{model_name}-{exp_name}_prisoner_A_result.csv'
+                    prisoner_B_filename = f'{model_name}-{exp_name}_prisoner_B_result.csv'
+                else:
+                    prisoner_A_filename = f'{model_name}-{exp_name}-cot_prisoner_A_result.csv'
+                    prisoner_B_filename = f'{model_name}-{exp_name}-cot_prisoner_B_result.csv'
 
                 run_single_round_experiment(
                     model_name=model_name,
@@ -167,7 +178,7 @@ def main(model_name):
                     llm_params=llm_params,
                 )
 
-                test_prompts(model_name=model_name, exp_name=exp_name)
+                test_prompts(model_name=model_name, exp_name=exp_name, cot=cot)
 
 if __name__ == "__main__":
     model_name = "repe-mistral-nemo"
