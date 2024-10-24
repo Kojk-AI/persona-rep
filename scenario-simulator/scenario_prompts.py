@@ -107,8 +107,14 @@ PD_PRISONER_A_USER_PROMPT_TEST_10 = """Which action did prisoner A play in round
 
 PD_PRISONER_A_USER_PROMPT_TEST_11 = """How many years in prison did prisoner A server in round {}"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_12 = """WHow many times did prisoner A choose {}?"""
+PD_PRISONER_A_USER_PROMPT_TEST_12 = """How many times did prisoner A choose to defect?"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_13 = """What is prisoner A’s current total time served in prison?"""
+PD_PRISONER_A_USER_PROMPT_TEST_13 = """How many times did prisoner A choose to cooperate?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_14 = """How many times did prisoner B choose to defect?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_15 = """How many times did prisoner B choose to cooperate?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_16 = """What is prisoner A’s current total time served in prison?"""
 
 """Ultimatum Game"""

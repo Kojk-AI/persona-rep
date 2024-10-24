@@ -4,6 +4,8 @@ from enum import Enum
 from helper.llm_helper import LLMHelper  # Correctly importing LLMHelper
 from scenario_prompts import *
 
+import json
+
 class PlayerStrategy(Enum):
     """
     Enum to represent the different strategies Player 2 can follow.
@@ -54,6 +56,7 @@ class PrisonersDilemma:
         self.seed = seed
         self.prisoner_A_filename = prisoner_A_filename
         self.log_test_filename = prisoner_A_filename.strip(".txt") + "_test.txt"
+        self.result_filename = prisoner_A_filename.strip(".txt") + "_history.json"
         random.seed(seed)
 
         # Instantiate the LLMHelper class for calling the LLM
@@ -86,6 +89,8 @@ class PrisonersDilemma:
                 print(
                     f"Round {round_num + 1}: Player 1 (LLM) = {player1_action}, Player 2 (Strategy) = {player2_action}"
                 )
+            with open(self.result_filename, "w") as f:
+                json.dump(history, f)
 
     def _create_summary_string(self, history: list, round_num: int) -> str:
         """
@@ -102,7 +107,7 @@ class PrisonersDilemma:
             return "No prior rounds."
         return "\n".join(
             [
-                f"Round {i + 1}: Player 1 = {p1}, Player 2 = {p2}"
+                f"Round {i + 1}: Prisoner A chooses to {p1}. Prisoner B chooses to {p2}."
                 for i, (p1, p2) in enumerate(history)
             ]
         )
@@ -122,10 +127,10 @@ class PrisonersDilemma:
         You are playing an Iterated Prisoner's Dilemma game. In each round, you must choose whether to cooperate or defect.
 
         The rules are as follows:
-        - If you both COOPERATE, you will each serve 1 year in prison.
-        - If you both DEFECT, you will each serve 3 years in prison.
-        - If you COOPERATE and the other prisoner DEFECTS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
-        - If you DEFECT and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+        - If both prisoners cooperate, both prisoners will each serve 1 year in prison.
+        - If both prisoners defect, both prisoners will each serve 3 years in prison.
+        - If prisoner A cooperates and prisoner B defects, prisoner A will serve 5 years in prison, and prisoner B will go free (0 years).
+        - If prisoner A detects and prisoner B cooperates, prisoner A will go free (0 years), and prisoner B will serve 5 years.
 
         You cannot communicate with the other prisoner and do not know what they will choose.
 
@@ -138,13 +143,13 @@ class PrisonersDilemma:
             PD_PRISONER_USER_PROMPT = f"""
             The following is a summary of the previous rounds:
             {history_summary}
-            What is your action for this round? First, think step by step and then reply with either <ans>COOPERATE</ans> or <ans>DEFECT</ans>.
+            What is your action for this round? First, think step by step and then reply with either <ans>cooperate</ans> or <ans>defect</ans>.
             """
         else:
             PD_PRISONER_USER_PROMPT = f"""
             The following is a summary of the previous rounds:
             {history_summary}
-            What is your action for this round? Please respond with either 'Cooperate' or 'Defect'.
+            What is your action for this round? Please respond with either 'cooperate' or 'defect'.
             """
         
         test_prompts = [PD_PRISONER_A_USER_PROMPT_TEST_1,
@@ -164,7 +169,7 @@ class PrisonersDilemma:
         
         for i, test in enumerate(test_prompts):
             
-            if i==9 or i==11:
+            if i==9 or i==10:
                 r = random.randint(1,i-1)
                 test = test.format(r)
             
@@ -195,15 +200,15 @@ class PrisonersDilemma:
         # print(response)
         # Extract action from LLM response
         if cot:
-            if "<ans>COOPERATE</ans>" in response[self.model_name][0]['response']:
-                return "Cooperate"
-            elif "<ans>DEFECT</ans>" in response[self.model_name][0]['response']:
-                return "Defect"
+            if "<ans>cooperate</ans>" in response[self.model_name][0]['response']:
+                return "cooperate"
+            elif "<ans>defect</ans>" in response[self.model_name][0]['response']:
+                return "defect"
         else:
             if "cooperate" in response[self.model_name][0]["response"].lower():
-                return "Cooperate"
+                return "cooperate"
             else:
-                return "Defect"
+                return "defect"
 
     def _get_player2_action(
         self, defected: bool, opponent_action: str, round_num: int, history: list
@@ -221,28 +226,28 @@ class PrisonersDilemma:
             Tuple[str, bool]: Player 2's action ('Cooperate' or 'Defect') and updated defected state.
         """
         if self.player2_strategy == PlayerStrategy.ALWAYS_COOPERATE:
-            return "Cooperate", defected
+            return "cooperate", defected
         elif self.player2_strategy == PlayerStrategy.ALWAYS_DEFECT:
-            return "Defect", defected
+            return "defect", defected
         elif self.player2_strategy == PlayerStrategy.RANDOM:
-            return random.choice(["Cooperate", "Defect"]), defected
+            return random.choice(["cooperate", "defect"]), defected
         elif self.player2_strategy == PlayerStrategy.UNFAIR_RANDOM:
-            return "Cooperate" if random.random() < 0.7 else "Defect", defected
+            return "cooperate" if random.random() < 0.7 else "defect", defected
         elif self.player2_strategy == PlayerStrategy.TIT_FOR_TAT:
-            return "Cooperate" if round_num == 0 else opponent_action, defected
+            return "cooperate" if round_num == 0 else opponent_action, defected
         elif self.player2_strategy == PlayerStrategy.SUSPICIOUS_TIT_FOR_TAT:
-            return "Defect" if round_num == 0 else opponent_action, defected
+            return "defect" if round_num == 0 else opponent_action, defected
         elif self.player2_strategy == PlayerStrategy.GRIM_TRIGGER:
             if defected:
-                return "Defect", defected
-            if opponent_action == "Defect":
-                return "Defect", True  # Set defected to True
-            return "Cooperate", defected
+                return "defect", defected
+            if opponent_action == "defect":
+                return "defect", True  # Set defected to True
+            return "cooperate", defected
         elif self.player2_strategy == PlayerStrategy.WIN_STAY_LOSE_SHIFT:
             if round_num == 0:
-                return "Cooperate", defected
+                return "cooperate", defected
             prev_p2_action, prev_p1_action = history[-1]
-            if prev_p2_action == "Cooperate" and prev_p1_action == "Cooperate":
-                return "Cooperate", defected
+            if prev_p2_action == "cooperate" and prev_p1_action == "cooperate":
+                return "cooperate", defected
             else:
-                return "Defect", defected
+                return "defect", defected

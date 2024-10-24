@@ -6,7 +6,7 @@ from scipy.optimize import minimize
 import strategies
 
 class SFEM():
-    def __init__(self, data, data2):
+    def __init__(self, data):
         self.n_subjects = 1
         self.n_actions = 100
         
@@ -19,7 +19,7 @@ class SFEM():
         self.others=np.empty((self.n_subjects,self.n_actions))
         self.others.fill(np.nan)
 
-        i, a, m, p, o, n = self.parse_data(data,data2)
+        i, a, m, p, o, n = self.parse_data(data)
 
         self.actions[i,:n] = a
         self.matches[i,:n] = m
@@ -29,18 +29,20 @@ class SFEM():
         self.strats, self.strat_names = self.generate_strats()
         self.n_strats = len(self.strats)
         
-    def parse_data(self, data, data2):
+    def parse_data(self, data):
         # Get the data into matrix format 
         # for i,sub in enumerate(data.subject.unique()):
         i= 0
-        a = ["<ans>COOPERATE</ans>" in x for x in data.response.tolist()]
+        a = [x == "cooperate" for x in data.A.tolist()]
         # m = data.supergame[data.subject==sub].tolist()
         # p = data.period[data.subject==sub].tolist()
         m = 1
         p = 100
-        o = ["<ans>COOPERATE</ans>" in x for x in data2.response.tolist()]
+        o = [x == "cooperate" in x for x in data.B.tolist()]
 
         n = len(a)
+        
+        return i, a, m, p, o, n
 
     def generate_strats(self):
         strats = []
