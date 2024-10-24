@@ -2,7 +2,7 @@ import random
 from typing import Callable, Optional, Tuple
 from enum import Enum
 from helper.llm_helper import LLMHelper  # Correctly importing LLMHelper
-
+from scenario_prompts import *
 
 class PlayerStrategy(Enum):
     """
@@ -53,6 +53,7 @@ class PrisonersDilemma:
         self.n_iterations = n_iterations
         self.seed = seed
         self.prisoner_A_filename = prisoner_A_filename
+        self.log_test_filename = prisoner_A_filename.strip(".txt") + "_test.txt"
         random.seed(seed)
 
         # Instantiate the LLMHelper class for calling the LLM
@@ -119,14 +120,18 @@ class PrisonersDilemma:
         """
         PD_PRISONER_SYSTEM_PROMPT = """
         You are playing an Iterated Prisoner's Dilemma game. In each round, you must choose whether to cooperate or defect.
-        
-        The game is played repeatedly against another player. You will be provided with a summary of all previous rounds, showing the actions taken by both you and your opponent. Based on this information, you need to decide whether to cooperate or defect in the current round.
-        
-        Remember:
-        - Cooperation tends to benefit both players, leading to mutual rewards.
-        - Defection may result in short-term gain but could lead to retaliation from the other player.
 
-        You are playing as Player 1. After reviewing the history of previous rounds, respond with either 'Cooperate' or 'Defect' for the current round.
+        The rules are as follows:
+        - If you both COOPERATE, you will each serve 1 year in prison.
+        - If you both DEFECT, you will each serve 3 years in prison.
+        - If you COOPERATE and the other prisoner DEFECTS, you will serve 5 years in prison, and the other prisoner will go free (0 years).
+        - If you DEFECT and the other prisoner COOPERATES, you will go free (0 years), and the other prisoner will serve 5 years.
+
+        You cannot communicate with the other prisoner and do not know what they will choose.
+
+        The game is played repeatedly against another player. You will be provided with a summary of all previous rounds, showing the actions taken by both you and your opponent. Based on this information, you need to decide whether to cooperate or defect in the current round.
+
+        You are playing as Prisoner A.
         """
 
         if cot:
@@ -141,6 +146,42 @@ class PrisonersDilemma:
             {history_summary}
             What is your action for this round? Please respond with either 'Cooperate' or 'Defect'.
             """
+        
+        test_prompts = [PD_PRISONER_A_USER_PROMPT_TEST_1,
+            PD_PRISONER_A_USER_PROMPT_TEST_2,
+            PD_PRISONER_A_USER_PROMPT_TEST_3,
+            PD_PRISONER_A_USER_PROMPT_TEST_4,
+            PD_PRISONER_A_USER_PROMPT_TEST_5,
+            PD_PRISONER_A_USER_PROMPT_TEST_6,
+            PD_PRISONER_A_USER_PROMPT_TEST_7,
+            PD_PRISONER_A_USER_PROMPT_TEST_8,
+            PD_PRISONER_A_USER_PROMPT_TEST_9,
+            PD_PRISONER_A_USER_PROMPT_TEST_10,
+            PD_PRISONER_A_USER_PROMPT_TEST_11,
+            PD_PRISONER_A_USER_PROMPT_TEST_12,
+            PD_PRISONER_A_USER_PROMPT_TEST_13,
+            ]
+        
+        for i, test in enumerate(test_prompts):
+            
+            if i==9 or i==11:
+                r = random.randint(1,i-1)
+                test = test.format(r)
+            
+            prompt = f"""
+            The following is a summary of the previous rounds:
+            {history_summary}
+            {test}
+            """
+            self.llm_helper.call_llm(
+			system_prompt=PD_PRISONER_SYSTEM_PROMPT,
+			prompt=prompt,
+			model_name=self.model_name,
+			llm_params=self.llm_params,
+			prisoner='test',
+			log_file=self.log_test_filename
+		    )
+
         # Call the LLM using llm_helper
         response = self.llm_helper.call_llm(
             system_prompt=PD_PRISONER_SYSTEM_PROMPT,

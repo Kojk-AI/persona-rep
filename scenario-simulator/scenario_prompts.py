@@ -85,20 +85,30 @@ PD_PRISONER_B_USER_PROMPT_COT = """You are Prisoner B. Please choose one of the 
 
 What is your decision? Think step by step and reply with either <ans>COOPERATE</ans> or <ans>BETRAY</ans>"."""
 
-PD_PRISONER_A_USER_PROMPT_TEST_1 = """What is the lowest/highest payoff player A can get in a single round?"""
+PD_PRISONER_A_USER_PROMPT_TEST_1 = """What is the lowest/highest payoff prisoner A can get in a single round?"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_2 = """Which actions is player A allowed to play?"""
+PD_PRISONER_A_USER_PROMPT_TEST_2 = """Which actions is prisoner A allowed to play?"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_3 = """What is the lowest/highest payoff player B can get in a single round?"""
+PD_PRISONER_A_USER_PROMPT_TEST_3 = """What is the lowest/highest payoff prisoner B can get in a single round?"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_4 = """Which actions is player B allowed to play?"""
+PD_PRISONER_A_USER_PROMPT_TEST_4 = """Which actions is prisoner B allowed to play?"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_5 = """Which is player X’s payoff in a single round if X betrays and Y betrays?"""
+PD_PRISONER_A_USER_PROMPT_TEST_5 = """Which is prisoner A’s payoff in a single round if A betrays and B betrays?"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_6 = """Which is player X’s payoff in a single round if X cooperates and Y cooperates?"""
+PD_PRISONER_A_USER_PROMPT_TEST_6 = """Which is prisoner A’s payoff in a single round if A cooperates and B cooperates?"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_7 = """Which is player X’s payoff in a single round if X betrays and Y cooperates?"""
+PD_PRISONER_A_USER_PROMPT_TEST_7 = """Which is prisoner A’s payoff in a single round if A betrays and B cooperates?"""
 
-PD_PRISONER_A_USER_PROMPT_TEST_8 = """Which is player X’s payoff in a single round if X cooperates and Y betrays?"""
+PD_PRISONER_A_USER_PROMPT_TEST_8 = """Which is prisoner A’s payoff in a single round if A cooperates and B betrays?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_9 = """What is the current round of the game?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_10 = """Which action did prisoner A play in round {}?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_11 = """How many years in prison did prisoner A server in round {}"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_12 = """WHow many times did prisoner A choose {}?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_13 = """What is prisoner A’s current total time served in prison?"""
 
 """Ultimatum Game"""
