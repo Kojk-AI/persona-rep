@@ -56,13 +56,14 @@ class PrisonersDilemma:
         self.seed = seed
         self.prisoner_A_filename = prisoner_A_filename
         self.log_test_filename = prisoner_A_filename.strip(".txt") + "_test.txt"
-        self.result_filename = prisoner_A_filename.strip(".txt") + "_history.json"
+        self.result_filename = prisoner_A_filename.strip(".txt") + "_history_iteration_{}.json"
+        self.invalid_counts = 0
         random.seed(seed)
 
         # Instantiate the LLMHelper class for calling the LLM
         self.llm_helper = LLMHelper()
 
-    def simulate(self, cot: bool):
+    def simulate(self, cot: bool, test: bool):
         """
         Simulate the game for the specified number of iterations and rounds.
         """
@@ -70,12 +71,15 @@ class PrisonersDilemma:
             history = []  # To store the history of each round's actions
             defected = False  # Track defection for strategies like GRIM_TRIGGER
 
+            if iteration>0:
+                test = False
+
             for round_num in range(self.n_rounds):
                 # Create history summary for Player 1 (LLM)
                 history_summary = self._create_summary_string(history, round_num)
 
                 # Call the LLM to get Player 1's action
-                player1_action = self._player1_fn_using_llm(cot, history_summary, round_num)
+                player1_action = self._player1_fn_using_llm(cot, history_summary, round_num, test)
 
                 # Get Player 2's action based on its strategy
                 player2_action, defected = self._get_player2_action(
@@ -89,7 +93,7 @@ class PrisonersDilemma:
                 print(
                     f"Round {round_num + 1}: Player 1 (LLM) = {player1_action}, Player 2 (Strategy) = {player2_action}"
                 )
-            with open(self.result_filename, "w") as f:
+            with open(self.result_filename.format(iteration), "w") as f:
                 json.dump(history, f)
 
     def _create_summary_string(self, history: list, round_num: int) -> str:
@@ -112,7 +116,7 @@ class PrisonersDilemma:
             ]
         )
 
-    def _player1_fn_using_llm(self, cot: bool, history_summary: str, round_num: int) -> str:
+    def _player1_fn_using_llm(self, cot: bool, history_summary: str, round_num: int, test: bool) -> str:
         """
         Simulates Player 1's action by calling the LLM.
 
@@ -123,69 +127,81 @@ class PrisonersDilemma:
         Returns:
             str: Player 1's action ('Cooperate' or 'Defect').
         """
-        PD_PRISONER_SYSTEM_PROMPT = """
-        You are playing an Iterated Prisoner's Dilemma game. In each round, you must choose whether to cooperate or defect.
-
-        The rules are as follows:
-        - If both prisoners cooperate, both prisoners will each serve 1 year in prison.
-        - If both prisoners defect, both prisoners will each serve 3 years in prison.
-        - If prisoner A cooperates and prisoner B defects, prisoner A will serve 5 years in prison, and prisoner B will go free (0 years).
-        - If prisoner A detects and prisoner B cooperates, prisoner A will go free (0 years), and prisoner B will serve 5 years.
-
-        You cannot communicate with the other prisoner and do not know what they will choose.
-
-        The game is played repeatedly against another player. You will be provided with a summary of all previous rounds, showing the actions taken by both you and your opponent. Based on this information, you need to decide whether to cooperate or defect in the current round.
-
-        You are playing as Prisoner A.
+        PD_PRISONER_SYSTEM_PROMPT = """You are playing an Iterated Prisoner's Dilemma game. In each round, you must choose whether to cooperate or defect.
+The rules are as follows:
+- if both prisoners cooperate, both prisoners will each serve 1 year in prison.
+- if both prisoners defect, both prisoners will each serve 3 years in prison.
+- if prisoner A cooperates and prisoner B defects, prisoner A will serve 5 years in prison, and prisoner B will go free (0 years).
+- if prisoner A detects and prisoner B cooperates, prisoner A will go free (0 years), and prisoner B will serve 5 years.
+Serving less years in the prison is a good thing.
+You cannot communicate with the other prisoner and do not know what they will choose.
+The game is played repeatedly against another player. You will be provided with a summary of all previous rounds, showing the actions taken by both you and your opponent. Based on this information, you need to decide whether to cooperate or defect in the current round.
+You are playing as Prisoner A.
         """
 
         if cot:
-            PD_PRISONER_USER_PROMPT = f"""
-            The following is a summary of the previous rounds:
-            {history_summary}
-            What is your action for this round? First, think step by step and then reply with either <ans>cooperate</ans> or <ans>defect</ans>.
+            PD_PRISONER_USER_PROMPT = f"""The following is a summary of the previous rounds:
+{history_summary}
+
+What is your action for this round? First, think step by step and then reply with either <ans>cooperate</ans> or <ans>defect</ans>.
             """
         else:
-            PD_PRISONER_USER_PROMPT = f"""
-            The following is a summary of the previous rounds:
-            {history_summary}
-            What is your action for this round? Please respond with either 'cooperate' or 'defect'.
+            PD_PRISONER_USER_PROMPT = f"""The following is a summary of the previous rounds:
+{history_summary}
+
+What is your action for this round? Please respond with either 'cooperate' or 'defect'.
             """
         
-        test_prompts = [PD_PRISONER_A_USER_PROMPT_TEST_1,
-            PD_PRISONER_A_USER_PROMPT_TEST_2,
-            PD_PRISONER_A_USER_PROMPT_TEST_3,
-            PD_PRISONER_A_USER_PROMPT_TEST_4,
-            PD_PRISONER_A_USER_PROMPT_TEST_5,
-            PD_PRISONER_A_USER_PROMPT_TEST_6,
-            PD_PRISONER_A_USER_PROMPT_TEST_7,
-            PD_PRISONER_A_USER_PROMPT_TEST_8,
-            PD_PRISONER_A_USER_PROMPT_TEST_9,
-            PD_PRISONER_A_USER_PROMPT_TEST_10,
-            PD_PRISONER_A_USER_PROMPT_TEST_11,
-            PD_PRISONER_A_USER_PROMPT_TEST_12,
-            PD_PRISONER_A_USER_PROMPT_TEST_13,
-            ]
-        
-        for i, test in enumerate(test_prompts):
+        if test:
+            test_prompts = [PD_PRISONER_A_USER_PROMPT_TEST_1,
+                PD_PRISONER_A_USER_PROMPT_TEST_2,
+                PD_PRISONER_A_USER_PROMPT_TEST_3,
+                PD_PRISONER_A_USER_PROMPT_TEST_4,
+                PD_PRISONER_A_USER_PROMPT_TEST_5,
+                PD_PRISONER_A_USER_PROMPT_TEST_6,
+                PD_PRISONER_A_USER_PROMPT_TEST_7,
+                PD_PRISONER_A_USER_PROMPT_TEST_8,
+                PD_PRISONER_A_USER_PROMPT_TEST_9,
+                PD_PRISONER_A_USER_PROMPT_TEST_10,
+                PD_PRISONER_A_USER_PROMPT_TEST_11,
+                PD_PRISONER_A_USER_PROMPT_TEST_12,
+                PD_PRISONER_A_USER_PROMPT_TEST_13,
+                ]
             
-            if i==9 or i==10:
-                r = random.randint(1,i-1)
-                test = test.format(r)
-            
-            prompt = f"""
-            The following is a summary of the previous rounds:
-            {history_summary}
-            {test}
-            """
-            self.llm_helper.call_llm(
-			system_prompt=PD_PRISONER_SYSTEM_PROMPT,
-			prompt=prompt,
-			model_name=self.model_name,
-			llm_params=self.llm_params,
-			prisoner='test',
-			log_file=self.log_test_filename
-		    )
+            for i, test in enumerate(test_prompts):
+                
+                if i==9 or i==10:
+                    # r = random.randint(1,i-1)
+                    for r in range(1,i-1,1):
+                        test_ = test.format(r)
+                
+                        prompt = f"""
+                        The following is a summary of the previous rounds:
+                        {history_summary}
+                        {test_}
+                        """
+                        self.llm_helper.call_llm(
+                        system_prompt=PD_PRISONER_SYSTEM_PROMPT,
+                        prompt=prompt,
+                        model_name=self.model_name,
+                        llm_params=self.llm_params,
+                        prisoner='test',
+                        log_file=self.log_test_filename
+                        )
+                else:
+                        prompt = f"""
+                        The following is a summary of the previous rounds:
+                        {history_summary}
+                        {test}
+                        """
+                        self.llm_helper.call_llm(
+                        system_prompt=PD_PRISONER_SYSTEM_PROMPT,
+                        prompt=prompt,
+                        model_name=self.model_name,
+                        llm_params=self.llm_params,
+                        prisoner='test',
+                        log_file=self.log_test_filename
+                        )
 
         # Call the LLM using llm_helper
         response = self.llm_helper.call_llm(
@@ -199,16 +215,31 @@ class PrisonersDilemma:
         )
         # print(response)
         # Extract action from LLM response
-        if cot:
-            if "<ans>cooperate</ans>" in response[self.model_name][0]['response']:
-                return "cooperate"
-            elif "<ans>defect</ans>" in response[self.model_name][0]['response']:
-                return "defect"
-        else:
-            if "cooperate" in response[self.model_name][0]["response"].lower():
-                return "cooperate"
+        invalid = True
+        while invalid:
+            if cot:
+                if "<ans>cooperate</ans>" in response[self.model_name][0]['response']:
+                    invalid = False
+                    return "cooperate"
+                elif "<ans>defect</ans>" in response[self.model_name][0]['response']:
+                    invalid = False
+                    return "defect"
+                else:
+                    self.invalid_counts += 1
+                    response = self.llm_helper.call_llm(
+                        system_prompt=PD_PRISONER_SYSTEM_PROMPT,
+                        prompt=PD_PRISONER_USER_PROMPT,
+                        model_name=self.model_name,
+                        llm_params=self.llm_params,  # Deterministic behavior
+                        prisoner="A",
+                        round=round_num,
+                        log_file=self.prisoner_A_filename,
+                    )
             else:
-                return "defect"
+                if "cooperate" in response[self.model_name][0]["response"].lower():
+                    return "cooperate"
+                else:
+                    return "defect"
 
     def _get_player2_action(
         self, defected: bool, opponent_action: str, round_num: int, history: list

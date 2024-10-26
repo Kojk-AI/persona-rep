@@ -85,7 +85,7 @@ PD_PRISONER_B_USER_PROMPT_COT = """You are Prisoner B. Please choose one of the 
 
 What is your decision? Think step by step and reply with either <ans>COOPERATE</ans> or <ans>BETRAY</ans>"."""
 
-PD_PRISONER_A_USER_PROMPT_TEST_1 = """What is the lowest/highest payoff prisoner A can get in a single round?"""
+PD_PRISONER_A_USER_PROMPT_TEST_1 = """What is the lowest/highest number of years in prison prisoner A can get in a single round?"""
 
 PD_PRISONER_A_USER_PROMPT_TEST_2 = """Which actions is prisoner A allowed to play?"""
 
