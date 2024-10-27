@@ -74,18 +74,21 @@ class PrisonersDilemma:
             if iteration>0:
                 test = False
 
+            player1_action = None
+            
             for round_num in range(self.n_rounds):
                 # Create history summary for Player 1 (LLM)
                 history_summary = self._create_summary_string(history, round_num)
 
                 # Call the LLM to get Player 1's action
-                player1_action = self._player1_fn_using_llm(cot, history_summary, round_num, test)
+                player1_action_new = self._player1_fn_using_llm(cot, history_summary, round_num, test)
 
                 # Get Player 2's action based on its strategy
                 player2_action, defected = self._get_player2_action(
                     defected, player1_action, round_num, history
                 )
 
+                player1_action = player1_action_new
                 # Update history with actions for this round
                 history.append((player1_action, player2_action))
 
