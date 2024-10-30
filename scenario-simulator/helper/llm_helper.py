@@ -10,7 +10,7 @@ from .custom_logger import CustomLogger
 import json
 from tqdm import tqdm
 from typing import Union, List, Dict
-from transformers import pipeline
+from transformers import pipeline, GenerationConfig
 from enum import Enum
 
 
@@ -276,7 +276,7 @@ class LLMHelper:
         require_json_output: bool,
     ) -> str:
         """
-        Query Hugging Face transformers models.
+        Query Hugging Face transformers models with user-specified generation parameters.
 
         Args:
             conversation_history (list): The conversation history.
@@ -293,8 +293,8 @@ class LLMHelper:
         # Initialize the Hugging Face pipeline for text generation
         pipe = pipeline("text-generation", model=model_enum.value)
 
-        # Generate the model's response
-        response = pipe(prompt)
+        # Pass the user's params directly to the pipeline call
+        response = pipe(prompt, **llm_params)
 
         # Extract the generated text (depending on format and response structure)
         answer = (
@@ -317,7 +317,7 @@ class LLMHelper:
         **kwargs,
     ) -> Dict[str, str]:
         """
-        Query LLMs with a prompt or a list of prompts and model names.
+        Query LLMs with a prompt or a list of prompts and model names, allowing custom Hugging Face generation parameters.
 
         Args:
             prompt (Union[str, List[str]]): The user's prompt or a list of prompts.
