@@ -1,6 +1,8 @@
-openai==0.27.0  # Ensure compatibility with the OpenAI API
-requests==2.31.0  # For making HTTP requests to Ollama or other external APIs
-python-dotenv==1.0.0  # For loading environment variables from .env file
-tqdm==4.65.0  # For progress bars in any loops or processing
-transformers==4.33.0  # Hugging Face transformers library
-torch==2.0.0  # Hugging Face models require PyTorch as the backend (adjust version based on your needs)
+openai
+pandas
+python-dotenv
+transformers
+tqdm
+torch
+huggingface-hub
+pytest
