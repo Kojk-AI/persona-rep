@@ -15,8 +15,8 @@ from enum import Enum
 
 
 class HuggingFaceModel(Enum):
-    LLAMA = "huggingface-Llama-3.1-8B-Instruct"
-    GEMMA = "huggingface-gemma-2-9b-it"
+    LLAMA = "meta-llama/Llama-3.1-8B-Instruct"
+    GEMMA = "google/gemma-2-9b-it"
     MISTRAL = "mistralai/Mistral-Nemo-Instruct-2407"
 
 

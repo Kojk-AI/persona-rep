@@ -32,7 +32,7 @@ class PrisonersDilemma:
         n_rounds: int = 10,
         n_iterations: int = 1,
         seed: int = 42,
-        prisoner_A_filename: str = "prisoner_A_log.txt",
+        prisoner_A_filename: str = "prisoner_A_log.csv",
     ):
         """
         Initialize the game simulation.
