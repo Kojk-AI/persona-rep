@@ -6,3 +6,4 @@ tqdm
 torch
 huggingface-hub
 pytest
+accelerate
