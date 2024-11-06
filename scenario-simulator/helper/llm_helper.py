@@ -10,8 +10,10 @@ from .custom_logger import CustomLogger
 import json
 from tqdm import tqdm
 from typing import Union, List, Dict
-from transformers import pipeline, GenerationConfig
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from enum import Enum
+import torch
+import psutil
 
 
 class HuggingFaceModel(Enum):
@@ -276,32 +278,109 @@ class LLMHelper:
         require_json_output: bool,
     ) -> str:
         """
-        Query Hugging Face transformers models with user-specified generation parameters.
+        Queries a Hugging Face transformer model deployed across multiple GPUs.
 
-        Args:
-            conversation_history (list): The conversation history.
-            model_enum (HuggingFaceModel): The Hugging Face model to use.
-            llm_params (dict): Additional parameters to pass to the model.
-            require_json_output (bool): Whether to require the response in JSON format.
+        This function loads and configures a Hugging Face transformer model specified
+        by `model_enum` to distribute computation across all available GPUs. It extracts
+        the latest user message from `conversation_history` as the model prompt and
+        applies the provided `llm_params` as generation parameters. For efficient memory
+        management, it uses bfloat16 precision and custom memory allocation per GPU.
+
+        Parameters:
+        ----------
+        conversation_history : list
+            List of dictionaries representing the conversation history. The latest user
+            message in the list is used as the input prompt.
+
+        model_enum : HuggingFaceModel
+            Enum specifying the Hugging Face model to be loaded. This determines model-
+            specific configurations, such as special token addition or max token count.
+
+        llm_params : dict
+            Dictionary of parameters for text generation, passed directly to the Hugging
+            Face pipeline (e.g., `max_new_tokens`, `temperature`, etc.).
+
+        require_json_output : bool
+            Indicates if the output should be formatted as JSON. Currently not utilized
+            in this function but may be used for future output formatting.
 
         Returns:
-            str: The model's response.
+        -------
+        str
+            The generated text response from the Hugging Face model.
+
+        Notes:
+        ------
+        - The function uses `torch.cuda.device_count()` to determine available GPUs and
+        prints memory allocation details for each device.
+        - Model loading is configured to maximize memory utilization across GPUs using
+        the `device_map` and `max_memory` parameters.
+        - Configurations are applied per model type (e.g., special tokens for GEMMA,
+        max token count for MISTRAL) to ensure compatibility.
+        - The function uses an automatic device mapping pipeline for efficient
+        multi-GPU inference.
+
         """
         # Extract the latest user message for querying the model
         prompt = conversation_history[-1]["content"]
 
-        # Initialize the Hugging Face pipeline for text generation
-        pipe = pipeline("text-generation", model=model_enum.value)
+        # Check available GPUs and print info
+        num_gpus = torch.cuda.device_count()
+
+        # Load the tokenizer
+        tokenizer = AutoTokenizer.from_pretrained(model_enum.value)
+
+        # Configure model loading for multi-GPU setup with proper memory formatting
+        max_memory = {
+            i: f"{int(torch.cuda.get_device_properties(i).total_memory * 0.85 / (1024**3))}GB"
+            for i in range(num_gpus)
+        }
+
+        # Add CPU memory limit dynamically
+        cpu_ram_gb = int(
+            psutil.virtual_memory().total / (1024**3) * 0.85
+        )  # 85% of total RAM
+        max_memory["cpu"] = f"{cpu_ram_gb}GB"
+
+        # Add CPU memory limit
+        # max_memory["cpu"] = "24GB"  # Adjust this value based on your system's RAM
+
+        # Load model with automatic device mapping
+        model = AutoModelForCausalLM.from_pretrained(
+            model_enum.value,
+            device_map="auto",  # This will automatically distribute across GPUs
+            max_memory=max_memory,  # Specify max memory per device
+            torch_dtype=torch.bfloat16,  # Use bfloat16 for better memory efficiency
+            low_cpu_mem_usage=True,
+        )
+
+        # Model-specific configurations
+        if model_enum == HuggingFaceModel.LLAMA:
+            model.config.pad_token_id = tokenizer.eos_token_id
+        elif model_enum == HuggingFaceModel.GEMMA:
+            special_tokens_dict = {
+                "additional_special_tokens": ["<start_of_turn>", "<end_of_turn>"]
+            }
+            tokenizer.add_special_tokens(special_tokens_dict)
+            model.resize_token_embeddings(len(tokenizer))
+        elif model_enum == HuggingFaceModel.MISTRAL:
+            if "max_new_tokens" not in llm_params:
+                llm_params["max_new_tokens"] = 1024
+
+        # Initialize the pipeline with automatic device mapping
+        pipe = pipeline(
+            "text-generation",
+            model=model,
+            tokenizer=tokenizer,
+            device_map="auto",  # This will use the same device mapping as the model
+            return_full_text=False,  # to avoid returning input with output
+        )
 
         # Pass the user's params directly to the pipeline call
         response = pipe(prompt, **llm_params)
 
-        # Extract the generated text (depending on format and response structure)
-        answer = (
-            response[0]["generated_text"]
-            if not require_json_output
-            else json.dumps(response)
-        )
+        # Extract the generated text
+        answer = response[0]["generated_text"]
 
         return answer
 
