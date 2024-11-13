@@ -61,3 +61,60 @@ The following is a summary of the previous rounds:
 
 What is your action for this round? Please respond with either 'Cooperate' or 'Defect'.
 """
+PD_PRISONER_A_USER_PROMPT = """You are Prisoner A. Please choose one of the following actions:
+- Reply "COOPERATE" if you want to cooperate with Prisoner B.
+- Reply "BETRAY" if you want to betray Prisoner B.
+
+What is your decision? Only reply with one word, either "COOPERATE" or "BETRAY"."""
+
+PD_PRISONER_B_USER_PROMPT = """You are Prisoner B. Please choose one of the following actions:
+- Reply "COOPERATE" if you want to cooperate with Prisoner A.
+- Reply "BETRAY" if you want to betray Prisoner A.
+
+What is your decision? Only reply with one word, either "COOPERATE" or "BETRAY"."""
+
+PD_PRISONER_A_USER_PROMPT_COT = """You are Prisoner A. Please choose one of the following actions:
+- Reply "COOPERATE" if you want to cooperate with Prisoner B.
+- Reply "BETRAY" if you want to betray Prisoner B.
+
+What is your decision? Think step by step and reply with either <ans>COOPERATE</ans> or <ans>BETRAY</ans>"."""
+
+PD_PRISONER_B_USER_PROMPT_COT = """You are Prisoner B. Please choose one of the following actions:
+- Reply "COOPERATE" if you want to cooperate with Prisoner A.
+- Reply "BETRAY" if you want to betray Prisoner A.
+
+What is your decision? Think step by step and reply with either <ans>COOPERATE</ans> or <ans>BETRAY</ans>"."""
+
+PD_PRISONER_A_USER_PROMPT_TEST_1 = """What is the lowest/highest number of years in prison prisoner A can get in a single round?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_2 = """Which actions is prisoner A allowed to play?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_3 = """What is the lowest/highest payoff prisoner B can get in a single round?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_4 = """Which actions is prisoner B allowed to play?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_5 = """Which is prisoner A’s payoff in a single round if A betrays and B betrays?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_6 = """Which is prisoner A’s payoff in a single round if A cooperates and B cooperates?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_7 = """Which is prisoner A’s payoff in a single round if A betrays and B cooperates?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_8 = """Which is prisoner A’s payoff in a single round if A cooperates and B betrays?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_9 = """What is the current round of the game?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_10 = """Which action did prisoner A play in round {}?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_11 = """How many years in prison did prisoner A server in round {}"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_12 = """How many times did prisoner A choose to defect?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_13 = """How many times did prisoner A choose to cooperate?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_14 = """How many times did prisoner B choose to defect?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_15 = """How many times did prisoner B choose to cooperate?"""
+
+PD_PRISONER_A_USER_PROMPT_TEST_16 = """What is prisoner A’s current total time served in prison?"""
+
+"""Ultimatum Game"""

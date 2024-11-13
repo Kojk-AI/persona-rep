@@ -22,6 +22,12 @@ class HuggingFaceModel(Enum):
     MISTRAL = "mistralai/Mistral-Nemo-Instruct-2407"
 
 
+from transformers import AutoTokenizer, pipeline, AutoModelForCausalLM
+import torch
+import pickle
+from repe import repe_pipeline_registry
+repe_pipeline_registry()
+
 class LLMHelper:
     """
     A helper class for interacting with LLM APIs and managing user conversations.
@@ -37,11 +43,14 @@ class LLMHelper:
         load_dotenv()
         self.api_key = os.getenv("OPENAI_API_KEY")
         openai.api_key = self.api_key
-        self.openai_client = OpenAI()
+        # self.openai_client = OpenAI()
         self.logger = CustomLogger()
         self.base_path = os.path.abspath(os.path.dirname(__file__))
         self._load_config()
         self.conversations = {}  # Dictionary to store conversation history
+
+        self.repe_model = None
+        self.repe_model_name = ""
 
     def _load_config(self):
         """
@@ -139,6 +148,93 @@ class LLMHelper:
             data["response_format"] = {"type": "json_object"}
         response = self.openai_client.chat.completions.create(**data)
         return response.choices[0].message.content
+
+    def _query_repe(self, conversation_history: list, model_name: str, llm_params: dict, require_json_output: bool) -> str:
+        """
+        Query the OpenAI API.
+
+        Args:
+            conversation_history (list): The conversation history.
+            model_name (str): The name of the model to use.
+            llm_params (dict): Additional parameters to pass to the LLM.
+            require_json_output (bool): Whether to require the response in JSON format.
+
+        Returns:
+            str: The model's response.
+        """
+        prompt = conversation_history[-1]['content']
+        # url = f"{self.ollama_remote_endpoint}/api/generate"
+        data = {
+            "model": model_name,
+            "prompt": prompt,
+            "stream": False,
+            "options": llm_params
+        }
+        if len(conversation_history) > 1:
+            data['system'] = conversation_history[0]['content']
+        if require_json_output:
+            data['format'] = 'json'
+
+        if self.repe_model is None or self.repe_model_name!=model_name:
+            if model_name == "repe-mistral-nemo":
+                model_name_or_path = "mistralai/Mistral-Nemo-Instruct-2407"
+
+            self.repe_model = AutoModelForCausalLM.from_pretrained(model_name_or_path, torch_dtype=torch.float16, device_map="auto").eval()
+            use_fast_tokenizer = "LlamaForCausalLM" not in self.repe_model.config.architectures
+            self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=use_fast_tokenizer, padding_side="left", legacy=False)
+            self.tokenizer.pad_token_id = 0 if self.tokenizer.pad_token_id is None else self.tokenizer.pad_token_id
+            self.tokenizer.bos_token_id = 1
+            self.repe_model_name = model_name
+        
+        with open("bfi_vec_multi_nemo.pkl", "rb") as f:
+            rr = pickle.load(f)
+
+        layer_id = list(range(-5, -20, -1))
+        # layer_id = [-16]
+        block_name="decoder_block"
+        control_method="reading_vec"
+
+        rep_control_pipeline = pipeline(
+            "rep-control", 
+            model=self.repe_model, 
+            tokenizer=self.tokenizer, 
+            layers=layer_id, 
+            control_method=control_method)
+
+        coeff= llm_params['coeff']
+        direction = llm_params['direction']
+
+        max_new_tokens=1024
+
+        rep_reader = rr[llm_params['personality']]
+
+        activations = {}
+        for layer in layer_id:
+            activations[layer] = torch.tensor(direction*coeff * rep_reader.directions[layer] * rep_reader.direction_signs[layer]).to(self.repe_model.device).half()
+
+        if len(conversation_history) > 1:
+            user_tag =  "[INST]"
+            assistant_tag =  "[/INST]"
+            inputs = [
+                f"{user_tag}{data['system']}\n\n{prompt}{assistant_tag}",
+            ]
+        else:
+            user_tag =  "[INST]"
+            assistant_tag =  "[/INST]"
+            inputs = [
+                f"{user_tag}{prompt}{assistant_tag}",
+            ]
+
+        print(f"Prompt: {inputs}")
+        print(f"Temperature: {llm_params['temperature']}")
+        if llm_params['temperature'] == 0.0:
+            do_sample=False
+        else:
+            do_sample=True
+        response = rep_control_pipeline(inputs, activations=activations, max_new_tokens=max_new_tokens, do_sample=do_sample, temperature=llm_params['temperature'])
+        response = response[0][0]['generated_text'].replace(inputs[0], "")
+
+        return response
 
     def _query_ollama(
         self,
@@ -469,6 +565,8 @@ class LLMHelper:
                         llm_params,
                         require_json_output,
                     )
+                elif single_model_name.startswith('repe'):
+                    answer = self._query_repe(conversation_history, single_model_name, llm_params, require_json_output)
                 else:
                     answer = self._query_ollama(
                         conversation_history,
