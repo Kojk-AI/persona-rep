@@ -270,10 +270,27 @@ class LLMHelper:
 
         return answer
 
+    # def query_mistral_instruction_model(system_prompt: str, user_prompt: str):
+    #     from transformers import pipeline
+
+    #     messages = [
+    #         {"role": "system", "content": system_prompt},
+    #         {"role": "user", "content": user_prompt},
+    #     ]
+    #     chatbot = pipeline(
+    #         "text-generation",
+    #         model="mistralai/Mistral-Nemo-Instruct-2407",
+    #         max_new_tokens=1024,
+    #         temperature=0,
+    #         do_sample=False,
+    #     )
+    #     return chatbot(messages)
+
     def _query_huggingface(
         self,
         conversation_history: list,
-        model_enum: HuggingFaceModel,
+        model_name: str,
+        system_prompt: str,
         llm_params: dict,
         require_json_output: bool,
     ) -> str:
@@ -324,11 +341,15 @@ class LLMHelper:
         # Extract the latest user message for querying the model
         prompt = conversation_history[-1]["content"]
 
+        # combined_prompt = (
+        #     f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n\n{prompt} [/INST]"
+        # )
+        print(conversation_history)
         # Check available GPUs and print info
         num_gpus = torch.cuda.device_count()
 
         # Load the tokenizer
-        tokenizer = AutoTokenizer.from_pretrained(model_enum.value)
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
 
         # Configure model loading for multi-GPU setup with proper memory formatting
         max_memory = {
@@ -347,7 +368,7 @@ class LLMHelper:
 
         # Load model with automatic device mapping
         model = AutoModelForCausalLM.from_pretrained(
-            model_enum.value,
+            model_name,
             device_map="auto",  # This will automatically distribute across GPUs
             max_memory=max_memory,  # Specify max memory per device
             torch_dtype=torch.bfloat16,  # Use bfloat16 for better memory efficiency
@@ -355,17 +376,17 @@ class LLMHelper:
         )
 
         # Model-specific configurations
-        if model_enum == HuggingFaceModel.LLAMA:
-            model.config.pad_token_id = tokenizer.eos_token_id
-        elif model_enum == HuggingFaceModel.GEMMA:
-            special_tokens_dict = {
-                "additional_special_tokens": ["<start_of_turn>", "<end_of_turn>"]
-            }
-            tokenizer.add_special_tokens(special_tokens_dict)
-            model.resize_token_embeddings(len(tokenizer))
-        elif model_enum == HuggingFaceModel.MISTRAL:
-            if "max_new_tokens" not in llm_params:
-                llm_params["max_new_tokens"] = 1024
+        # if model_enum == HuggingFaceModel.LLAMA:
+        #     model.config.pad_token_id = tokenizer.eos_token_id
+        # elif model_enum == HuggingFaceModel.GEMMA:
+        #     special_tokens_dict = {
+        #         "additional_special_tokens": ["<start_of_turn>", "<end_of_turn>"]
+        #     }
+        #     tokenizer.add_special_tokens(special_tokens_dict)
+        #     model.resize_token_embeddings(len(tokenizer))
+        # elif model_enum == HuggingFaceModel.MISTRAL:
+        #     if "max_new_tokens" not in llm_params:
+        #         llm_params["max_new_tokens"] = 1024
 
         # Initialize the pipeline with automatic device mapping
         pipe = pipeline(
@@ -374,10 +395,11 @@ class LLMHelper:
             tokenizer=tokenizer,
             device_map="auto",  # This will use the same device mapping as the model
             return_full_text=False,  # to avoid returning input with output
+            **llm_params,
         )
 
         # Pass the user's params directly to the pipeline call
-        response = pipe(prompt, **llm_params)
+        response = pipe(conversation_history)
 
         # Extract the generated text
         answer = response[0]["generated_text"]
@@ -431,10 +453,12 @@ class LLMHelper:
 
                 conversation_history.append({"role": "user", "content": single_prompt})
 
-                if isinstance(single_model_name, HuggingFaceModel):
+                # if isinstance(single_model_name, HuggingFaceModel):
+                if single_model_name in HuggingFaceModel._value2member_map_:
                     answer = self._query_huggingface(
                         conversation_history,
                         single_model_name,
+                        system_prompt,
                         llm_params,
                         require_json_output,
                     )

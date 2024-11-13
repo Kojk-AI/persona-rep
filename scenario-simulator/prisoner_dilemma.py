@@ -204,6 +204,7 @@ class PrisonersDilemma:
             round=round_num,
             log_file=self.prisoner_A_filename,
         )
+
         # print(response)
         # Extract action from LLM response
         if cot:
